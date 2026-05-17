@@ -22,30 +22,141 @@ body,
   -webkit-tap-highlight-color: transparent;
 }
 
-.feature-placeholder {
-  padding: 6rem 1.5rem 2rem;
-  text-align: center;
+.fortune-screen {
+  position: relative;
+  min-height: 100vh;
+  padding: 4.5rem 1.25rem 4rem;
+  max-width: 36rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
 }
 
-.feature-placeholder h1 {
-  font-size: 1.6rem;
+.fortune-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fortune-header h1 {
+  font-size: 1.7rem;
   margin: 0;
   color: var(--mesh-accent);
+  letter-spacing: 0.02em;
 }
 
-.feature-placeholder p {
-  max-width: 32rem;
+.fortune-status {
   margin: 0;
-  opacity: 0.85;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  font-variant-numeric: tabular-nums;
 }
 
-.feature-status {
+.fortune-name,
+.fortune-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--mesh-fg);
+  font: inherit;
+  resize: vertical;
+}
+
+.fortune-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fortune-add,
+.fortune-draw {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  cursor: pointer;
+  transition: opacity 160ms ease;
+}
+
+.fortune-draw {
+  background: var(--mesh-accent);
+  color: #1a1a1a;
+  font-weight: 600;
+  padding: 1rem;
+  font-size: 1.05rem;
+}
+
+.fortune-add:disabled,
+.fortune-draw:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.fortune-card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
+  min-height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.fortune-card-text {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.fortune-card-author {
+  margin: 0;
   font-size: 0.85rem;
-  opacity: 0.6;
+  opacity: 0.65;
+}
+
+.fortune-card-empty {
+  margin: 0;
+  opacity: 0.5;
+  font-style: italic;
+}
+
+.fortune-pool {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.fortune-chip {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0.85;
+}
+
+.fortune-history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
   font-variant-numeric: tabular-nums;
 }
