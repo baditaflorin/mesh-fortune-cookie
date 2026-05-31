@@ -1,7 +1,7 @@
 # mesh-fortune-cookie
 
 [![pages](https://img.shields.io/badge/live-baditaflorin.github.io%2Fmesh-fortune-cookie-ffd778)](https://baditaflorin.github.io/mesh-fortune-cookie/)
-[![version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/baditaflorin/mesh-fortune-cookie/blob/main/package.json)
+[![version](https://img.shields.io/badge/version-0.1.1-blue)](https://github.com/baditaflorin/mesh-fortune-cookie/blob/main/package.json)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 > Pool of fortunes, fair deterministic draw. Every peer agrees on the same cookie.
