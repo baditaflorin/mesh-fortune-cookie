@@ -4,6 +4,7 @@ import {
   useEventLog,
   useFairRng,
   useNamedPeer,
+  useRoster,
   type MeshConfig,
   type YRoom,
 } from "@baditaflorin/mesh-common";
@@ -28,7 +29,10 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
   const { name, setName, nameOf } = useNamedPeer(config, room);
   const fortunes = useEventLog<Fortune>(room, "fortunes");
   const draws = useEventLog<Draw>(room, "drawn");
-  const fairRng = useFairRng(room, "fortune-salts");
+  const roster = useRoster(room);
+  const fairRng = useFairRng(room, "fortune-salts", {
+    peerIds: roster.present,
+  });
   const [draft, setDraft] = useState("");
 
   const stateMap = room.doc.getMap<number>("state");
